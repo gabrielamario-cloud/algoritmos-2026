@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cofrinho do Pedrinho</title>
+</head>
+<body>
+
+<div class="card">
+    <h2>Cofrinho </h2>
+    
+    <div class="input-group">
+        <label>1 centavo:</label>
+        <input type="number" id="m1" value="0" min="0">
+    </div>
+    <div class="input-group">
+        <label>5 centavos:</label>
+        <input type="number" id="m5" value="0" min="0">
+    </div>
+    <div class="input-group">
+        <label>10 centavos:</label>
+        <input type="number" id="m10" value="0" min="0">
+    </div>
+    <div class="input-group">
+        <label>25 centavos:</label>
+        <input type="number" id="m25" value="0" min="0">
+    </div>
+    <div class="input-group">
+        <label>50 centavos:</label>
+        <input type="number" id="m50" value="0" min="0">
+    </div>
+    <div class="input-group">
+        <label>1 real:</label>
+        <input type="number" id="m100" value="0" min="0">
+    </div>
+
+    <button onclick="calcularTotal()">Calcular Total</button>
+
+    <div id="resultado">Total: R$ 0,00</div>
+    <script src="cofrinho.js"></script>
+</div>
