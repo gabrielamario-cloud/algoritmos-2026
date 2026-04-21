@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Pisos</title>
+</head>
+<body>
+
+    <h2>Calcular Quantidade de Pisos</h2>
+
+    <h3>Dimensões do ambiente (em metros)</h3>
+    <label>Comprimento:</label>
+    <input type="number" id="comprimento" min="0"><br><br>
+
+    <label>Largura:</label>
+    <input type="number" id="largura" min="0"><br><br>
+
+    <h3>Tamanho do piso (em centímetros)</h3>
+    <label>Comprimento do piso:</label>
+    <input type="number" id="compPiso" min="0"><br><br>
+
+    <label>Largura do piso:</label>
+    <input type="number" id="largPiso" min="0"><br><br>
+
+    <button onclick="calcularPisos()">Calcular</button>
+
+    <h3 id="resultado"></h3>
+
+    <script src="calculodepisos.js"></script>
+
+</body>
+</html>
