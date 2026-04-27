@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2 - Natação</title>
+</head>
+<body>
+    <h1>Classificação de Nadador</h1>
+    <input type="number" id="idade" placeholder="Digite a idade">
+    <button onclick="classificar()">Verificar Categoria</button>
+    <p id="resultado"></p>
+
+    <script>
+        function classificar() {
+            const idade = parseInt(document.getElementById('idade').value);
+            const display = document.getElementById('resultado');
+            let categoria = "";
+
+            if (idade >= 5 && idade <= 7) categoria = "Infantil A";
+            else if (idade >= 8 && idade <= 10) categoria = "Infantil B";
+            else if (idade >= 11 && idade <= 13) categoria = "Juvenil A";
+            else if (idade >= 14 && idade <= 17) categoria = "Juvenil B";
+            else if (idade >= 18) categoria = "Sênior";
+            else categoria = "Idade fora das categorias permitidas, jovem demais para competir.";
+
+            display.innerText = "Categoria: " + categoria;
+        }
+    </script>
+</body>
+</html>

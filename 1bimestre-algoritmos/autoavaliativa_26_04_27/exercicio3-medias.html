@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 3 - Médias</title>
+</head>
+<body>
+    <h2>Cálculo de Médias</h2>
+    <input type="number" id="x" placeholder="Número 1">
+    <input type="number" id="y" placeholder="Número 2">
+    <input type="number" id="z" placeholder="Número 3"><br><br>
+    
+    <button onclick="calcular('aritmetica')">Aritmética</button>
+    <button onclick="calcular('ponderada')">Ponderada</button>
+    <button onclick="calcular('harmonica')">Harmônica</button>
+    <button onclick="calcular('geometrica')">Geométrica</button>
+    
+    <p id="resMedia"></p>
+
+    <script>
+        const funcoesMedia = {
+            aritmetica: (x, y, z) => (x + y + z) / 3,
+            ponderada: (x, y, z) => (x + 2*y + 3*z) / 6,
+            harmonica: (x, y, z) => 3 / (1/x + 1/y + 1/z),
+            geometrica: (x, y, z) => Math.pow(x * y * z, 1/3)
+        };
+
+        function calcular(tipo) {
+            const n1 = parseFloat(document.getElementById('x').value);
+            const n2 = parseFloat(document.getElementById('y').value);
+            const n3 = parseFloat(document.getElementById('z').value);
+            
+            const resultado = funcoesMedia[tipo](n1, n2, n3);
+            document.getElementById('resMedia').innerText = `Média ${tipo}: ${resultado.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
